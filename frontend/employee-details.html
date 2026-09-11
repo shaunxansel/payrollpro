@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Details - PayrollPro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+
+            <a href="./index.html">
+                Dashboard
+            </a>
+
+            <a href="./employees.html" class="active">
+                Employees
+            </a>
+
+            <a href="./payroll.html">
+                Payroll
+            </a>
+
+            <a href="./reports.html">
+                Reports
+            </a>
+
+            <a href="./settings.html">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>
+                    Employee Details
+                </h1>
+
+                <p>
+                    View employee information and payroll details.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             EMPLOYEE DETAILS CARD
+        ================================================== -->
+
+        <section class="form-card employee-details-card">
+
+            <h2 id="employeeName">
+                Employee
+            </h2>
+
+            <p
+                id="employeeId"
+                class="details-id"
+            ></p>
+
+
+            <!-- ==================================================
+                 PERSONAL & EMPLOYMENT DETAILS
+            ================================================== -->
+
+            <div class="details-section">
+
+                <h3 class="section-title">
+                    Personal & Employment Details
+                </h3>
+
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+
+                        <span>
+                            Full Name
+                        </span>
+
+                        <strong id="detailName"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Employee ID
+                        </span>
+
+                        <strong id="detailId"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Email Address
+                        </span>
+
+                        <strong id="detailEmail"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Phone Number
+                        </span>
+
+                        <strong id="detailPhone"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Department
+                        </span>
+
+                        <strong id="detailDepartment"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Designation
+                        </span>
+
+                        <strong id="detailDesignation"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Employee Type
+                        </span>
+
+                        <strong id="detailType"></strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 PAYROLL DETAILS
+            ================================================== -->
+
+            <div class="details-section">
+
+                <h3 class="section-title">
+                    Payroll Details
+                </h3>
+
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+
+                        <span>
+                            Basic Salary
+                        </span>
+
+                        <strong id="detailBasicSalary"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            HRA
+                        </span>
+
+                        <strong id="detailHra"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            DA
+                        </span>
+
+                        <strong id="detailDa"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            PF
+                        </span>
+
+                        <strong id="detailPf"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Net Salary
+                        </span>
+
+                        <strong id="detailNetSalary"></strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 PART-TIME DETAILS
+            ================================================== -->
+
+            <div
+                class="details-section"
+                id="partTimeDetails"
+            >
+
+                <h3 class="section-title">
+                    Part-Time Details
+                </h3>
+
+
+                <div class="details-grid">
+
+                    <div class="detail-item">
+
+                        <span>
+                            Hours Worked
+                        </span>
+
+                        <strong id="detailHours"></strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Rate Per Hour
+                        </span>
+
+                        <strong id="detailRate"></strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 BUTTONS
+            ================================================== -->
+
+            <div class="form-actions">
+
+                <a
+                    href="./employees.html"
+                    class="btn btn-secondary"
+                >
+                    ← Back to Employees
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="./script.js"></script>
+
+</body>
+
+</html>

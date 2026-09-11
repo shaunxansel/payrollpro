@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Employee - PayrollPro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+
+            <a href="./index.html">
+                Dashboard
+            </a>
+
+            <a href="./employees.html" class="active">
+                Employees
+            </a>
+
+            <a href="./payroll.html">
+                Payroll
+            </a>
+
+            <a href="./reports.html">
+                Reports
+            </a>
+
+            <a href="./settings.html">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1 id="formTitle">
+                    Add New Employee
+                </h1>
+
+                <p>
+                    Register a new employee and configure their payroll details.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             EMPLOYEE FORM
+        ================================================== -->
+
+        <section class="form-card">
+
+            <form id="addEmployeeForm">
+
+
+                <!-- ==================================================
+                     PERSONAL & EMPLOYMENT DETAILS
+                ================================================== -->
+
+                <div class="form-section">
+
+                    <h3 class="section-title">
+                        Personal & Employment Details
+                    </h3>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- Employee ID -->
+
+                        <div class="form-group">
+
+                            <label for="empId">
+                                Employee ID *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="empId"
+                                placeholder="e.g. EMP001"
+                                required
+                            >
+
+                            <span class="error-msg">
+                                Employee ID is required
+                            </span>
+
+                        </div>
+
+
+                        <!-- Full Name -->
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="empName"
+                                placeholder="e.g. Rahul Sharma"
+                                required
+                            >
+
+                            <span class="error-msg">
+                                Full Name is required
+                            </span>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address *
+                            </label>
+
+                            <input
+                                type="email"
+                                ```html
+id="empEmail"
+                                placeholder="e.g. rahul@company.com"
+                                required
+                            >
+
+                            <span class="error-msg">
+                                Please enter a valid email address
+                            </span>
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="empPhone"
+                                placeholder="e.g. 9876543210"
+                                maxlength="10"
+                                minlength="10"
+                                pattern="[0-9]{10}"
+                                inputmode="numeric"
+                                required
+                            >
+
+                            <span class="error-msg">
+                                Phone number is required
+                            </span>
+
+                        </div>
+
+
+                        <!-- Department -->
+
+                        <div class="form-group">
+
+                            <label for="department">
+                                Department *
+                            </label>
+
+                            <select id="empDepartment"required>
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="IT">
+                                    IT
+                                </option>
+
+                                <option value="HR">
+                                    Human Resources
+                                </option>
+
+                                <option value="Finance">
+                                    Finance
+                                </option>
+
+                                <option value="Marketing">
+                                    Marketing
+                                </option>
+
+                                <option value="Operations">
+                                    Operations
+                                </option>
+
+                            </select>
+
+                            <span class="error-msg">
+                                Please select a department
+                            </span>
+
+                        </div>
+
+
+                        <!-- Designation -->
+
+                        <div class="form-group">
+
+                            <label for="designation">
+                                Designation *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="empDesignation"
+                                placeholder="e.g. Software Developer"
+                                required
+                            >
+
+                            <span class="error-msg">
+                                Designation is required
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     PAYROLL CONFIGURATION
+                ================================================== -->
+
+                <div class="form-section">
+
+                    <h3 class="section-title">
+                        Payroll Configuration
+                    </h3>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- Employee Type -->
+
+                        <div class="form-group">
+
+                            <label for="empType">
+                                Employee Type *
+                            </label>
+
+                            <select id="empType" required>
+
+                                <option value="Full-Time">
+                                    Full-Time
+                                </option>
+
+                                <option value="Part-Time">
+                                    Part-Time
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Basic Salary -->
+
+                        <div class="form-group">
+
+                            <label for="basicSalary">
+                                Basic Salary (₹) *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="basicSalary"
+                                min="0"
+                                placeholder="e.g. 45000"
+                                required
+                            >
+
+                            <span class="error-msg">
+                                Valid basic salary is required
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================================
+                         FULL-TIME FIELDS
+                    ================================================== -->
+
+                    <div id="fullTimeFields">
+
+                        <div class="form-grid">
+
+
+                            <!-- HRA Calculation Type -->
+
+                            <div class="form-group">
+
+                                <label for="hraType">
+                                    HRA Calculation
+                                </label>
+
+                                <select id="hraType">
+
+                                    <option value="percentage">
+                                        Percentage (%)
+                                    </option>
+
+                                    <option value="amount">
+                                        Fixed Amount (₹)
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- HRA -->
+
+                            <div class="form-group">
+
+                                <label for="hra">
+                                    HRA Value
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="hra"
+                                    min="0"
+                                    placeholder="e.g. 20"
+                                >
+
+                                <span
+                                    id="hraHint"
+                                    style="color: #8195ab; font-size: 12px; margin-top: 5px;"
+                                >
+                                    Enter percentage of Basic Salary
+                                </span>
+
+                            </div>
+
+
+                            <!-- DA Calculation Type -->
+
+                            <div class="form-group">
+
+                                <label for="daType">
+                                    DA Calculation
+                                </label>
+
+                                <select id="daType">
+
+                                    <option value="percentage">
+                                        Percentage (%)
+                                    </option>
+
+                                    <option value="amount">
+                                        Fixed Amount (₹)
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- DA -->
+
+                            <div class="form-group">
+
+                                <label for="da">
+                                    DA Value
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="da"
+                                    min="0"
+                                    placeholder="e.g. 10"
+                                >
+
+                                <span
+                                    id="daHint"
+                                    style="color: #8195ab; font-size: 12px; margin-top: 5px;"
+                                >
+                                    Enter percentage of Basic Salary
+                                </span>
+
+                            </div>
+
+
+                            <!-- PF Calculation Type -->
+
+                            <div class="form-group">
+
+                                <label for="pfType">
+                                    PF Calculation
+                                </label>
+
+                                <select id="pfType">
+
+                                    <option value="percentage">
+                                        Percentage (%)
+                                    </option>
+
+                                    <option value="amount">
+                                        Fixed Amount (₹)
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- PF -->
+
+                            <div class="form-group">
+
+                                <label for="pf">
+                                    PF Value
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="pf"
+                                    min="0"
+                                    placeholder="e.g. 12"
+                                >
+
+                                <span
+                                    id="pfHint"
+                                    style="color: #8195ab; font-size: 12px; margin-top: 5px;"
+                                >
+                                    Enter percentage of Basic Salary
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================================
+                         PART-TIME FIELDS
+                    ================================================== -->
+
+                    <div
+                        id="partTimeFields"
+                        class="hidden"
+                    >
+
+                        <div class="form-grid">
+
+
+                            <!-- Hours Worked -->
+
+                            <div class="form-group">
+
+                                <label for="hoursWorked">
+                                    Hours Worked *
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="hoursWorked"
+                                    min="0"
+                                    placeholder="e.g. 80"
+                                >
+
+                                <span class="error-msg">
+                                    Please specify hours worked
+                                </span>
+
+                            </div>
+
+
+                            <!-- Rate Per Hour -->
+
+                            <div class="form-group">
+
+                                <label for="ratePerHour">
+                                    Rate Per Hour (₹) *
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="ratePerHour"
+                                    min="0"
+                                    placeholder="e.g. 250"
+                                >
+
+                                <span class="error-msg">
+                                    Please specify hourly rate
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     FORM BUTTONS
+                ================================================== -->
+
+                <div class="form-actions">
+
+                    <a
+                        href="./employees.html"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Save Employee
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+    "name": "PayrollPro - Employee Payroll Management System",
+    "short_name": "PayrollPro",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#06111f",
+    "theme_color": "#ffd21f",
+    "description": "Employee Payroll Management System"
+}

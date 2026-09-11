@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - PayrollPro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+
+            <a href="./index.html">
+                Dashboard
+            </a>
+
+            <a href="./employees.html">
+                Employees
+            </a>
+
+            <a href="./payroll.html">
+                Payroll
+            </a>
+
+            <a href="./reports.html">
+                Reports
+            </a>
+
+            <a href="./settings.html" class="active">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p>
+                    Manage your PayrollPro preferences
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             GENERAL SETTINGS
+        ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                General Settings
+            </h2>
+
+            <div class="settings-card">
+
+                <div class="setting-item">
+
+                    <div>
+                        <h3>Company Name</h3>
+
+                        <p>
+                            Name displayed throughout the payroll system.
+                        </p>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="companyName"
+                        value="PayrollPro"
+                    >
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+                        <h3>Currency</h3>
+
+                        <p>
+                            Currency used for salary calculations.
+                        </p>
+                    </div>
+
+                    <select id="currency">
+
+                        <option value="INR">
+                            Indian Rupee (₹)
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             APPEARANCE SETTINGS
+        ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                Appearance
+            </h2>
+
+            <div class="settings-card">
+
+                <div class="setting-item">
+
+                    <div>
+                        <h3>Color Scheme</h3>
+
+                        <p>
+                            Choose the accent color for PayrollPro.
+                        </p>
+                    </div>
+
+                    <select id="colorScheme">
+
+                        <option value="yellow">
+                            Navy + Yellow
+                        </option>
+
+                        <option value="blue">
+                            Navy + Blue
+                        </option>
+
+                        <option value="purple">
+                            Navy + Purple
+                        </option>
+
+                        <option value="green">
+                            Navy + Green
+                        </option>
+
+                        <option value="orange">
+                            Navy + Orange
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+                        <h3>Theme</h3>
+
+                        <p>
+                            Choose how PayrollPro should look.
+                        </p>
+                    </div>
+
+                    <select id="themeMode">
+
+                        <option value="dark">
+                            Dark
+                        </option>
+
+                        <option value="light">
+                            Light
+                        </option>
+
+                        <option value="system">
+                            System Default
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PAYROLL SETTINGS
+        ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                Payroll Settings
+            </h2>
+
+            <div class="settings-card">
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>HRA</h3>
+
+                        <p>
+                            Default HRA percentage for full-time employees.
+                        </p>
+
+                    </div>
+
+                    <div class="setting-value">
+                        20%
+                    </div>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>DA</h3>
+
+                        <p>
+                            Default DA percentage for full-time employees.
+                        </p>
+
+                    </div>
+
+                    <div class="setting-value">
+                        10%
+                    </div>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>PF</h3>
+
+                        <p>
+                            Default PF deduction percentage.
+                        </p>
+
+                    </div>
+
+                    <div class="setting-value">
+                        12%
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SYSTEM INFORMATION
+        ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>
+                System Information
+            </h2>
+
+            <div class="settings-card">
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>
+                            Application
+                        </h3>
+
+                        <p>
+                            Payroll management system
+                        </p>
+
+                    </div>
+
+                    <span class="system-badge">
+                        PayrollPro
+                    </span>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>
+                            Version
+                        </h3>
+
+                        <p>
+                            Current application version
+                        </p>
+
+                    </div>
+
+                    <span class="system-badge">
+                        v1.0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SAVE BUTTON
+        ================================================== -->
+
+        <div class="settings-actions">
+
+            <button
+                class="save-settings-btn"
+                onclick="saveSettings()"
+            >
+                Save Settings
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ==================================================
+     SETTINGS JAVASCRIPT
+================================================== -->
+
+<script>
+
+function saveSettings() {
+
+    const companyName =
+        document.getElementById("companyName").value.trim();
+
+    if (!companyName) {
+
+        alert("Please enter a company name.");
+
+        return;
+    }
+
+    localStorage.setItem(
+        "companyName",
+        companyName
+    );
+
+    alert("Settings saved successfully!");
+}
+
+
+// Load saved company name
+
+const savedCompanyName =
+    localStorage.getItem("companyName");
+
+if (savedCompanyName) {
+
+    document.getElementById("companyName").value =
+        savedCompanyName;
+
+}
+
+</script>
+
+
+<!-- MAIN JAVASCRIPT -->
+<script src="./script.js"></script>
+
+</body>
+</html>

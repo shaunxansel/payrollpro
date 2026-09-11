@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Payroll System</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+            <a href="./index.html" class="active">Dashboard</a>
+            <a href="./employees.html">Employees</a>
+            <a href="./payroll.html">Payroll</a>
+            <a href="./reports.html">Reports</a>
+            <a href="./settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header>
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to Employee Payroll Management System</p>
+            </div>
+        </header>
+
+
+        <!-- DASHBOARD CARDS -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="dashboardTotalEmployees">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Monthly Payroll</h3>
+                <p id="dashboardPayroll">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Full-Time Employees</h3>
+                <p id="dashboardFullTime">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Part-Time Employees</h3>
+                <p id="dashboardPartTime">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- RECENT EMPLOYEES -->
+        <section class="recent">
+
+            <h2>Recent Employees</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+
+                <tbody id="dashboardEmployeeTable">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="./script.js"></script>
+
+</body>
+</html>

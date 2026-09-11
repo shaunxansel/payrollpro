@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employees - PayrollPro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+
+            <a href="./index.html">
+                Dashboard
+            </a>
+
+            <a href="./employees.html" class="active">
+                Employees
+            </a>
+
+            <a href="./payroll.html">
+                Payroll
+            </a>
+
+            <a href="./reports.html">
+                Reports
+            </a>
+
+            <a href="./settings.html">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+
+                <h1>
+                    Employees
+                </h1>
+
+                <p>
+                    Manage your employees and their information.
+                </p>
+
+            </div>
+
+
+           <a
+    href="./add-employee.html?mode=add"
+    onclick="localStorage.removeItem('editEmployee')"
+>
+                + Add Employee
+            </a>
+
+        </header>
+
+
+        <!-- ==================================================
+             SEARCH
+        ================================================== -->
+
+        <section class="employee-controls">
+
+            <input
+                type="text"
+                id="searchEmployee"
+                placeholder="Search employees..."
+            >
+
+        </section>
+
+
+        <!-- ==================================================
+             EMPLOYEE LIST
+        ================================================== -->
+
+        <section class="recent">
+
+            <h2>
+                Employee List
+            </h2>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Type</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="employeeTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="./script.js"></script>
+
+</body>
+</html>

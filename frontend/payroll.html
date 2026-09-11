@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payroll - PayrollPro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+            <a href="./index.html">Dashboard</a>
+            <a href="./employees.html">Employees</a>
+            <a href="./payroll.html" class="active">Payroll</a>
+            <a href="./reports.html">Reports</a>
+            <a href="./settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+                <h1>Payroll</h1>
+                <p>View and manage employee salary information.</p>
+            </div>
+
+        </header>
+
+
+        <!-- PAYROLL SUMMARY -->
+        <section class="cards payroll-summary-cards">
+
+            <div class="card">
+                <h3>Total Payroll</h3>
+                <p id="totalPayroll">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="payrollEmployees">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Full-Time Employees</h3>
+                <p id="payrollFullTime">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Part-Time Employees</h3>
+                <p id="payrollPartTime">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- PAYROLL TABLE -->
+        <section class="recent">
+
+            <h2>Employee Payroll</h2>
+
+
+            <div class="employee-controls">
+
+                <input
+                    type="text"
+                    id="payrollSearch"
+                    placeholder="Search employees..."
+                >
+
+                <select id="payrollTypeFilter">
+
+                    <option value="All">
+                        All Employee Types
+                    </option>
+
+                    <option value="Full-Time">
+                        Full-Time
+                    </option>
+
+                    <option value="Part-Time">
+                        Part-Time
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Employee</th>
+                        <th>Type</th>
+                        <th>Basic Salary</th>
+                        <th>HRA</th>
+                        <th>DA</th>
+                        <th>PF</th>
+                        <th>Net Salary</th>
+                        <th>Payslip</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="payrollTable">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="./script.js"></script>
+
+</body>
+</html>

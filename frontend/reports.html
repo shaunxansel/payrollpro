@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports - PayrollPro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffd21f">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>PayrollPro</h2>
+
+        <nav>
+            <a href="./index.html">Dashboard</a>
+            <a href="./employees.html">Employees</a>
+            <a href="./payroll.html">Payroll</a>
+            <a href="./reports.html" class="active">Reports</a>
+            <a href="./settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+                <h1>Reports</h1>
+                <p>Payroll and employee insights</p>
+            </div>
+
+        </header>
+
+
+        <!-- SUMMARY CARDS -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="reportEmployees">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Payroll</h3>
+                <p id="reportPayroll">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Salary</h3>
+                <p id="reportAverage">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Highest Salary</h3>
+                <p id="reportHighest">₹0</p>
+            </div>
+
+        </section>
+
+
+        <!-- EMPLOYEE TYPE REPORT -->
+        <section class="recent report-section">
+
+            <h2>Employee Type Breakdown</h2>
+
+            <div class="report-grid">
+
+                <div class="report-box">
+                    <h3>Full-Time Employees</h3>
+                    <p id="reportFullTime">0</p>
+                </div>
+
+                <div class="report-box">
+                    <h3>Part-Time Employees</h3>
+                    <p id="reportPartTime">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DEPARTMENT REPORT -->
+        <section class="recent report-section">
+
+            <h2>Department Overview</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Employees</th>
+                        <th>Total Payroll</th>
+                    </tr>
+                </thead>
+
+                <tbody id="departmentReport"></tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- HIGHEST PAID EMPLOYEE -->
+        <section class="recent report-section">
+
+            <h2>Highest Paid Employee</h2>
+
+            <div
+                id="highestEmployee"
+                class="highest-employee"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="./script.js"></script>
+
+</body>
+</html>
